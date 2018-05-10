@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Game</title>
+	</head>
+	<body>
+		<div class="grid-container">
+			<div class="item1">
+				<img src="../image/banana.png" class="image" id="banana-V-0.9" draggable="true" ondragstart="drag(event)">
+			</div>
+
+			<div class="item2">
+				<img src="../image/cabbage.png" class="image" id="cabbage-V-0.9" draggable="true" ondragstart="drag(event)">
+			</div>
+
+			<div class="item3">
+				<img src="../image/tomato.png" class="image" id="tomato-V-0.9" draggable="true" ondragstart="drag(event)">
+			</div>
+
+			<div class="item4">
+				<img src="../image/salad.png" class="image" id="salad-V-0.9" draggable="true" ondragstart="drag(event)">
+			</div>
+
+			<div class="item5" id="chips-container" ondrop="dropBack(event)" ondragover="allowDrop(event)">
+				<img src="../image/chips.png" class="image" id="chips-F-1.2" draggable="true" ondragstart="drag(event)">
+			</div>
+
+			<div class="item6" id="chocolate-container" ondrop="dropBack(event)" ondragover="allowDrop(event)">
+				<img src="../image/chocolate.png" class="image" id="chocolate-F-1.2" draggable="true" ondragstart="drag(event)">
+			</div>
+
+			<div class="item7" id="cake-container" ondrop="dropBack(event)" ondragover="allowDrop(event)">
+				<img src="../image/cake.png" class="image" id="cake-F-1.2" draggable="true" ondragstart="drag(event)">
+			</div>
+
+			<div class="item8" id="hamburger-container" ondrop="dropBack(event)" ondragover="allowDrop(event)">
+				<img src="../image/hamburger.png" class="image" id="hamburger-F-1.2" draggable="true" ondragstart="drag(event)">
+			</div>
+
+			<div class="fridge">
+				<img src="../image/fridge.png" class="image">
+			</div>
+
+			<div class="chick">
+				<img src="../image/chick.png" class="image" id="chick">
+			</div>
+
+			<div class="inner" id="inner" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+			<div class="bowl" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<img src="../image/bowl.png" class="image">
+			</div>
+
+			<div class="message">
+				<p id="message"></p>
+
+			</div>
+
+		</div>
+
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+
+			.grid-container {
+
+				display: grid;
+				grid-template-columns: 11.625% 11.625% 11.625% 11.625% 11.625% 11.625% 11.625% 11.625%;
+				grid-template-rows: 11.625% 11.625% 11.625% 11.625% 11.625% 11.625% 11.625% 11.625%;
+				grid-template-areas:
+				'imag1 imag1 imag2 imag2 imag3 imag3 imag4 imag4'
+				'imag1 imag1 imag2 imag2 imag3 imag3 imag4 imag4'
+				'imag5 imag5 imag6 imag6 imag7 imag7 imag8 imag8'
+				'imag5 imag5 imag6 imag6 imag7 imag7 imag8 imag8'
+				'empty empty empty empty empty empty empty empty'
+				'chick chick chick inner inner fridge fridge fridge'
+				'chick chick chick inner inner fridge fridge fridge'
+				'chick chick chick bowl bowl fridge fridge fridge';
+				grid-gap: 1%;
+				background-color: pink;
+
+				width: 70vw;
+				height: 100vh;
+				padding: 1%;
+				box-sizing: border-box;
+
+			}
+
+			.grid-container > div {
+/*				background-color: rgba(255,255,255,0.8);
+				border: 2px solid;*/
+				text-align: center;
+				vertical-align: middle;
+			}
+
+			.item1 { grid-area: imag1; }
+			.item2 { grid-area: imag2; }
+			.item3 { grid-area: imag3; }
+			.item4 { grid-area: imag4; }
+			.item5 { grid-area: imag5; }
+			.item6 { grid-area: imag6; }
+			.item7 { grid-area: imag7; }
+			.item8 { grid-area: imag8; }
+			.chick { grid-area: chick; }
+			.fridge { grid-area: fridge; }
+			.inner { grid-area: inner; }
+			.bowl { grid-area: bowl; }
+			.message {
+				grid-area: empty;
+
+				color: #1A3835;
+				font-size: 22px;
+				font-style: italic;
+				font-family: 'Merriweather';
+				font-weight: 500;
+				line-height: 30px;
+				position: relative;
+			 }
+
+			.image {
+				display: inline-block;
+				height: 90%;
+				max-width: 100%;
+			}
+
+		</style>
+
+		<script>
+			var fatFactor = 1;
+
+			function allowDrop(ev) {
+			    ev.preventDefault();
+			}
+
+			function drag(ev) {
+			    ev.dataTransfer.setData("text", ev.target.id);
+			}
+
+			function drop(ev) {
+		    ev.preventDefault();
+		    var data = ev.dataTransfer.getData("text");
+		    var inner = document.getElementById('inner');
+		    inner.appendChild(document.getElementById(data));
+
+		    var chick = document.getElementById('chick');
+
+				var [item_id, series, fatFactor] = data.split('-');
+
+
+				if(series == 'V') {
+					alert(`I love ${item_id}, thank you!`);
+					setTimeout(function() {
+						document.getElementById("message").innerHTML = "I become prettier!";
+
+						inner.innerHTML = "";
+						chick.width *= fatFactor;
+
+					},1000);
+
+
+				} else if (series == 'F') {
+					if (confirm("This food has high calories, are you sure to feed?")) {
+						setTimeout(function() {
+							var txt = "oh my god, look at my chubby face!<br>Let's do some <a href=\"exercise.html\">exercise!</a>";
+							document.getElementById("message").innerHTML = txt;
+							inner.innerHTML = "";
+							chick.width *= fatFactor;
+
+						},1000);
+
+					} else {
+							document.getElementById("message").innerHTML = "Good choice!!<br>Now let's move it back.";
+					}
+				}
+			}
+
+			function dropBack(ev) {
+				ev.preventDefault();
+				var dataBack = ev.dataTransfer.getData("text");
+				ev.target.appendChild(document.getElementById(dataBack));
+				document.getElementById("message").innerHTML = "Good Job!";
+			}
+
+		</script>
+
+	</body>
+</html>
