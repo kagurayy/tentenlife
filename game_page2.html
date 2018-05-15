@@ -6,7 +6,7 @@
 	<body>
 		<div class="grid-container">
 			<div class="item1">
-				<img src="./image/banana.png" class="image" id="banana-V-0.9" draggable="true" ondragstart="drag(event)">
+				<img src="./image/banana.png" class="image" id="bananas-V-0.9" draggable="true" ondragstart="drag(event)">
 			</div>
 
 			<div class="item2">
@@ -14,7 +14,7 @@
 			</div>
 
 			<div class="item3">
-				<img src="./image/tomato.png" class="image" id="tomato-V-0.9" draggable="true" ondragstart="drag(event)">
+				<img src="./image/tomato.png" class="image" id="tomatoes-V-0.9" draggable="true" ondragstart="drag(event)">
 			</div>
 
 			<div class="item4">
@@ -160,7 +160,7 @@
 
 
 				} else if (series == 'F') {
-					if (confirm("This food has high calories, are you sure to feed?")) {
+					if (confirm("This food has high calories, are you sure ?")) {
 						setTimeout(function() {
 							var txt = "oh my god, look at my chubby face!<br>Let's do some <a href=\"exercise.html\">exercise!</a>";
 							document.getElementById("message").innerHTML = txt;
