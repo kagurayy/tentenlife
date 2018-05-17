@@ -22,19 +22,19 @@
 			</div>
 
 			<div class="item5" id="chips-container" ondrop="dropBack(event)" ondragover="allowDrop(event)">
-				<img src="./image/chips.png" class="image" id="chips-F-1.2" draggable="true" ondragstart="drag(event)">
+				<img src="./image/chips.png" class="image" id="Chips-F-1.2" draggable="true" ondragstart="drag(event)">
 			</div>
 
 			<div class="item6" id="chocolate-container" ondrop="dropBack(event)" ondragover="allowDrop(event)">
-				<img src="./image/chocolate.png" class="image" id="chocolate-F-1.2" draggable="true" ondragstart="drag(event)">
+				<img src="./image/chocolate.png" class="image" id="Chocolate-F-1.2" draggable="true" ondragstart="drag(event)">
 			</div>
 
 			<div class="item7" id="cake-container" ondrop="dropBack(event)" ondragover="allowDrop(event)">
-				<img src="./image/cake.png" class="image" id="cake-F-1.2" draggable="true" ondragstart="drag(event)">
+				<img src="./image/cake.png" class="image" id="Cake-F-1.2" draggable="true" ondragstart="drag(event)">
 			</div>
 
 			<div class="item8" id="hamburger-container" ondrop="dropBack(event)" ondragover="allowDrop(event)">
-				<img src="./image/hamburger.png" class="image" id="hamburger-F-1.2" draggable="true" ondragstart="drag(event)">
+				<img src="./image/hamburger.png" class="image" id="Hamburger-F-1.2" draggable="true" ondragstart="drag(event)">
 			</div>
 
 			<div class="fridge">
@@ -55,7 +55,6 @@
 				<p id="message"></p>
 
 			</div>
-
 		</div>
 
 		<style type="text/css">
@@ -124,6 +123,12 @@
 				max-width: 100%;
 			}
 
+			.image:hover {
+				opacity: 0.7;
+				box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+				transform: scale(1.05);
+			}
+
 		</style>
 
 		<script>
@@ -149,9 +154,8 @@
 
 
 				if(series == 'V') {
-					alert(`I love ${item_id}, thank you!`);
 					setTimeout(function() {
-						document.getElementById("message").innerHTML = "I become prettier!";
+						document.getElementById("message").innerHTML = `I love ${item_id}, thank you!`;
 
 						inner.innerHTML = "";
 						chick.width *= fatFactor;
@@ -160,27 +164,23 @@
 
 
 				} else if (series == 'F') {
-					if (confirm("This food has high calories, are you sure to feed?")) {
 						setTimeout(function() {
-							var txt = "oh my god, look at my chubby face!<br>Let's do some <a href=\"exercise.html\">exercise!</a>";
+							var txt = `${item_id} tastes good but it has high calories. Look at my chubby face!`
+							// "oh my god, look at my chubby face!<br>Let's do some <a href=\"exercise.html\">exercise!</a>";
 							document.getElementById("message").innerHTML = txt;
 							inner.innerHTML = "";
 							chick.width *= fatFactor;
 
 						},1000);
-
-					} else {
-							document.getElementById("message").innerHTML = "Good choice!!<br>Now let's move it back.";
-					}
-				}
 			}
+		}
 
-			function dropBack(ev) {
-				ev.preventDefault();
-				var dataBack = ev.dataTransfer.getData("text");
-				ev.target.appendChild(document.getElementById(dataBack));
-				document.getElementById("message").innerHTML = "Good Job!";
-			}
+			// function dropBack(ev) {
+			// 	ev.preventDefault();
+			// 	var dataBack = ev.dataTransfer.getData("text");
+			// 	ev.target.appendChild(document.getElementById(dataBack));
+			// 	document.getElementById("message").innerHTML = "Good Job!";
+			// }
 
 		</script>
 
