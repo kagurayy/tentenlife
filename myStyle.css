@@ -48,10 +48,20 @@ body {
 .video {
   grid-row-start: 1;
   grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 7;
+}
+.firework_left {
+  grid-row-start: 1;
+  grid-row-end: 6;
   grid-column-start: 1;
+  grid-column-end: 3;
+}
+.firework_right {
+  grid-row-start: 1;
+  grid-row-end: 6;
+  grid-column-start: 7;
   grid-column-end: 9;
-
-
 }
 
 #video {
@@ -68,6 +78,10 @@ body {
   font-weight: 500;
   line-height: 30px;
   position: relative;
+ }
+
+ .firework_left {
+
  }
 
 .image {

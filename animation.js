@@ -111,8 +111,8 @@ function drop(ev) {
       chick.src = "./image/chick_happy.png";
       audio.src = "./mp3/firework.wav";
       audio.play();
-
       video.style.display = "block";
+      document.getElementById("firework_left").style.bbackgroundImage = "url(./image/firework.png)";
 
 
     }, 4000);
