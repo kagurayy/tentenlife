@@ -2,8 +2,10 @@
 <html>
 	<head>
 		<title>Game</title>
+		<link rel="stylesheet" href="myStyle.css">
 	</head>
 	<body>
+		<!-- <canvas id="canvas" width="150" height="94"></canvas> -->
 		<div class="grid-container">
 			<div class="item1">
 				<img src="./image/banana.png" class="image" id="banana-V-0.9" draggable="true" ondragstart="drag(event)">
@@ -53,136 +55,17 @@
 
 			<div class="message">
 				<p id="message"></p>
+			</div>
 
+			<div class="video">
+				<iframe width="560" height="315" id="video"
+				src="https://www.youtube.com/embed/8lOhvS-xyrA?rel=0">
+				</iframe>
 			</div>
 		</div>
 
-		<style type="text/css">
-			body {
-				margin: 0;
-			}
-
-			.grid-container {
-
-				display: grid;
-				grid-template-columns: 11.625% 11.625% 11.625% 11.625% 11.625% 11.625% 11.625% 11.625%;
-				grid-template-rows: 11.625% 11.625% 11.625% 11.625% 11.625% 11.625% 11.625% 11.625%;
-				grid-template-areas:
-				'imag1 imag1 imag2 imag2 imag3 imag3 imag4 imag4'
-				'imag1 imag1 imag2 imag2 imag3 imag3 imag4 imag4'
-				'imag5 imag5 imag6 imag6 imag7 imag7 imag8 imag8'
-				'imag5 imag5 imag6 imag6 imag7 imag7 imag8 imag8'
-				'empty empty empty empty empty empty empty empty'
-				'chick chick chick inner inner fridge fridge fridge'
-				'chick chick chick inner inner fridge fridge fridge'
-				'chick chick chick bowl bowl fridge fridge fridge';
-				grid-gap: 1%;
-				background-color: pink;
-
-				width: 70vw;
-				height: 100vh;
-				padding: 1%;
-				box-sizing: border-box;
-
-			}
-
-			.grid-container > div {
-/*				background-color: rgba(255,255,255,0.8);
-				border: 2px solid;*/
-				text-align: center;
-				vertical-align: middle;
-			}
-
-			.item1 { grid-area: imag1; }
-			.item2 { grid-area: imag2; }
-			.item3 { grid-area: imag3; }
-			.item4 { grid-area: imag4; }
-			.item5 { grid-area: imag5; }
-			.item6 { grid-area: imag6; }
-			.item7 { grid-area: imag7; }
-			.item8 { grid-area: imag8; }
-			.chick { grid-area: chick; }
-			.fridge { grid-area: fridge; }
-			.inner { grid-area: inner; }
-			.bowl { grid-area: bowl; }
-			.message {
-				grid-area: empty;
-
-				color: #1A3835;
-				font-size: 22px;
-				font-style: italic;
-				font-family: 'Merriweather';
-				font-weight: 500;
-				line-height: 30px;
-				position: relative;
-			 }
-
-			.image {
-				display: inline-block;
-				height: 90%;
-				max-width: 100%;
-			}
-
-			.image:hover {
-				opacity: 0.7;
-				box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-				transform: scale(1.05);
-			}
-
-		</style>
-
-		<script>
-			var fatFactor = 1;
-
-			function allowDrop(ev) {
-			    ev.preventDefault();
-			}
-
-			function drag(ev) {
-			    ev.dataTransfer.setData("text", ev.target.id);
-			}
-
-			function drop(ev) {
-		    ev.preventDefault();
-		    var data = ev.dataTransfer.getData("text");
-		    var inner = document.getElementById('inner');
-		    inner.appendChild(document.getElementById(data));
-
-		    var chick = document.getElementById('chick');
-
-				var [item_id, series, fatFactor] = data.split('-');
-
-
-				if(series == 'V') {
-					setTimeout(function() {
-						document.getElementById("message").innerHTML = `I love ${item_id}, thank you!`;
-
-						inner.innerHTML = "";
-						chick.width *= fatFactor;
-
-					},1000);
-
-
-				} else if (series == 'F') {
-						setTimeout(function() {
-							var txt = `${item_id} tastes good but it has high calories. Look at my chubby face!`
-							// "oh my god, look at my chubby face!<br>Let's do some <a href=\"exercise.html\">exercise!</a>";
-							document.getElementById("message").innerHTML = txt;
-							inner.innerHTML = "";
-							chick.width *= fatFactor;
-
-						},1000);
-			}
-		}
-
-			// function dropBack(ev) {
-			// 	ev.preventDefault();
-			// 	var dataBack = ev.dataTransfer.getData("text");
-			// 	ev.target.appendChild(document.getElementById(dataBack));
-			// 	document.getElementById("message").innerHTML = "Good Job!";
-			// }
+		<script type="text/javascript" src="./animation.js">
 
 		</script>
-
 	</body>
 </html>
