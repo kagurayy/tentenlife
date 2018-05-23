@@ -12,6 +12,10 @@ var inner = document.getElementById('inner');
 var chick = document.getElementById('chick');
 var message = document.getElementById('message');
 var video = document.getElementById('video');
+var fridge = document.getElementById('fridge');
+var bowl = document.getElementById('bowl');
+var firework = document.getElementById('firework');
+
 var audio = new Audio();
 var drop_count = 0;
 
@@ -105,17 +109,24 @@ function drop(ev) {
     },1000);
   }
 
+
+
   if (drop_count == 8 ) {
     setTimeout(function() {
       message.innerHTML = "Congratulations! Now you have more food in your body than in the fridge.<br>Let's watch the video about how funny the animals are when they get fat.";
-      chick.src = "./image/chick_happy.png";
+      message.style.color = "white";
+      document.getElementById("grid-container").style.backgroundImage = "url('./image/chick_firework.jpg')";
+      chick.style.display = "none";
+      fridge.style.display = "none";
+      bowl.style.display = "none";
+
       audio.src = "./mp3/firework.wav";
       audio.play();
+
+    }, 3000);
+
+    setTimeout(function() {
       video.style.display = "block";
-      document.getElementById("firework_left").style.bbackgroundImage = "url(./image/firework.png)";
-
-
-    }, 4000);
-
+    } ,6000);
   }
 }

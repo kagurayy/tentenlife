@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<!-- <canvas id="canvas" width="150" height="94"></canvas> -->
-		<div class="grid-container">
+		<div class="grid-container" id="grid-container">
 			<div class="item1">
 				<img src="./image/banana.png" class="image" id="banana-V-0.9" draggable="true" ondragstart="drag(event)">
 			</div>
@@ -40,7 +40,7 @@
 			</div>
 
 			<div class="fridge">
-				<img src="./image/fridge.png" class="image">
+				<img src="./image/fridge.png" class="image" id="fridge">
 			</div>
 
 			<div class="chick">
@@ -50,7 +50,7 @@
 			<div class="inner" id="inner" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
 			<div class="bowl" ondrop="drop(event)" ondragover="allowDrop(event)">
-				<img src="./image/bowl.png" class="image">
+				<img src="./image/bowl.png" class="image" id="bowl">
 			</div>
 
 			<div class="message">
@@ -63,13 +63,8 @@
 				</iframe>
 			</div>
 
-			<div class="firework_left" id="firework_left">
-				<p id="firework_left"></p>
-
-			</div>
-
-			<div class="firework_right" id="firework_right">
-				<p id="firework_right"></p>
+			<div class="firework">
+				<img class="image" id="firework">
 			</div>
 		</div>
 
