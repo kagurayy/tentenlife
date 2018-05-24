@@ -44,7 +44,7 @@ function drop(ev) {
   var chick_new_src = "";
 
   if (item_id == "banana") {
-    message_box = "Bananas are rich in patassium and fiber. They can help prevent asthma, cancer, high blood pressure, diabetes, cardiovascular disease, and digestive problems. I like bananas!";
+    message_box = "Bananas are rich in potassium and fiber. They can help prevent asthma, cancer, high blood pressure, diabetes, cardiovascular disease, and digestive problems. I like bananas!";
     audio.src = "./mp3/eat_quick.mp3";
   } else if (item_id == "cabbage") {
     message_box = "Cabbage is rich in antioxidants, including vitamin C, anthocyanins, and sulfur, since it is a cruciferous vegetable. Do I look prettier?";
@@ -55,7 +55,7 @@ function drop(ev) {
     audio.src = "./mp3/eat_tomato.wav";
 
   } else if (item_id == "salad") {
-    message_box = "Oh, you bring me a salad! Look at the colorful garden vagetables, thay are so tasty. Thank you very much!";
+    message_box = "Oh, you bring me a salad! Look at the colorful garden vegatables, they are so tasty. Thank you very much!";
     audio.src = "./mp3/eat_salad.wav";
 
   } else if (item_id == "Chips") {
@@ -71,7 +71,7 @@ function drop(ev) {
     audio.src = "./mp3/eat_mhm.mp3";
 
   } else if (item_id == "Hamburger") {
-    message_box = "In the states, you can buy Chinese food. In Beijing you can buy hamburger. It's very close. Now I feel the world become a big family. Not like bofore, two countries are far away.";
+    message_box = "In the states, you can buy Chinese food. In Beijing you can buy hamburger. It's very close. Now I feel the world become a big family. Not like before, two countries are far away.";
     audio.src = "./mp3/eat_yummy.mp3";
   }
 
