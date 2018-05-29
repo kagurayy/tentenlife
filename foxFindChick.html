@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>fox</title>
+  </head>
+  <body onload="start()">
+    <div id="container">
+      <div id="grid_container">
+        <div class="fox"></div>
+        <div class="chick"></div>
+        <div class="a">Please...I'm small and skinny, not tasty! If you could feed me some food, I will be more delicious.</div>
+        <div class="b"></div>
+        <div class="c">HAHAHA, you look so tasty! I'm hungry now!</div>
+
+      </div>
+
+    </div>
+    <button onclick="load()">Feed the chick.</button>
+    </div>
+
+
+
+
+    <style>
+      body {
+        margin: 0;
+      }
+      button {
+        width: 16vw;
+        height: 8vh;
+
+        position: absolute;
+        left: 72vw;
+        top: 90vh;
+
+        background-color: #4CAF50;
+        border: none;
+        color: black;
+
+        padding: 15px 15px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+
+        transition-duration: 0.4s;
+        cursor: pointer;
+
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+      }
+      #container {
+        width: 70vw;
+        height: 100vh;
+        background-color: rgb(3, 55, 63);
+      }
+      #grid_container {
+        position: relative;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        background-color: rgb(2, 45, 31);
+
+        display: grid;
+        grid-template-columns: 16.6% 16.6% 16.6% 16.6%;
+        grid-template-rows: 16.6% 16.6% 16.6% 16.6%;
+        grid-template-areas:
+        'a a a a chick chick'
+        'a a a a chick chick'
+        'b b b b b b'
+        'b b b b b b'
+        'fox fox c c c c'
+        'fox fox c c c c';
+        grid-gap: 0;
+        padding: 1%;
+        box-sizing: border-box;
+      }
+
+      .fox {
+        grid-area: fox;
+        background: url(./image/fox_fork.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      .chick {
+        grid-area: chick;
+        background: url(./image/chick_scared.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      .a {
+        grid-area: a;
+        background-color: red;
+        text-align: center;
+        font-size: 38px;
+      }
+      .c {
+        grid-area: c;
+        background-color: blue;
+        text-align: center;
+        font-size: 40px;
+      }
+
+
+
+
+    </style>
+
+
+    <script type="text/javascript">
+      function load() {
+        window.location = "game_page2.html"
+      }
+
+
+    </script>
+
+  </body>
+</html>

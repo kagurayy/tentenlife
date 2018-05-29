@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>fox</title>
+  </head>
+  <body onload="start()">
+    <div id="container">
+      <div id="grid_container">
+        <div class="fox"></div>
+        <div class="chick"></div>
+        <div class="c">Fox</div>
+        <div class="f">And</div>
+        <div class="i">Chick</div>
+
+      </div>
+
+    </div>
+    <button onclick="load()"></button>
+    </div>
+
+
+
+
+    <style>
+      body {
+        margin: 0;
+      }
+      #container {
+        width: 70vw;
+        height: 100vh;
+        background-color: rgb(3, 55, 63);
+      }
+      #grid_container {
+        position: relative;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        background-color: rgb(2, 45, 31);
+
+        display: grid;
+        grid-template-columns: 16.6% 16.6% 16.6% 16.6%;
+        grid-template-rows: 16.6% 16.6% 16.6% 16.6%;
+        grid-template-areas:
+        'a a a a a a'
+        'b c c c chick chick'
+        'b c c c chick chick'
+        'fox fox fox f f g'
+        'fox fox fox h i i'
+        'fox fox fox h i i';
+        grid-gap: 0;
+        padding: 1%;
+        box-sizing: border-box;
+      }
+
+      .fox {
+        grid-area: fox;
+        background: url(./image/fox.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      .chick {
+        grid-area: chick;
+        background: url(./image/chick.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      .c {
+        grid-area: c;
+        text-align: center;
+        font-size: 120px;
+        color: rgb(244, 244, 53);
+        font-family: Chalkduster, fantasy;
+        font-weight: bold;
+      }
+      .f {
+        grid-area: f;
+        text-align: left;
+        font-size: 60px;
+        color: rgb(244, 244, 53);
+        font-family: Chalkduster, fantasy;
+        font-weight: bold;
+      }
+      .i {
+        grid-area: i;
+        text-align: left;
+        font-size: 80px;
+        color: rgb(244, 244, 53);
+        font-family: Chalkduster, fantasy;
+        font-weight: bold;
+      }
+    </style>
+
+
+    <script type="text/javascript">
+      var audio = new Audio();
+      audio.src = "";
+      function start() {
+        // audio.play();
+        setTimeout(function () {
+          window.location = "fox.html";
+        },2000);
+      }
+
+    </script>
+
+  </body>
+</html>

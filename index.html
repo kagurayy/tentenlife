@@ -4,7 +4,7 @@
 		<title>A Simple Web Page</title>
 	</head>
 
-	<body>
+	<body onload="start()">
 		<div id="bamboo">
 			<div id="bamboo_bg"></div>
 
@@ -12,11 +12,6 @@
 				<a href="https://lifeaboutjapan.blogspot.jp/">Contact me</a>
 
 			</div>
-
-			<audio autoplay loop>
-				<source src="./mp3/ukulele.mp3" type="audio/mpeg">
-			</audio>
-
 
 			<h1>Healthy Diet</h1>
 
@@ -46,8 +41,8 @@
 					<h2>Junk Food</h2>
 			</a>
 
-			<a id="chick" class="column" href="game.html" target="_blank">
-					<h2>Feed the Chick</h2>
+			<a id="chick" class="column" href="foxAndChick.html" target="_blank">
+					<h2>Fox and Chick</h2>
 			</a>
 
 		</div>
@@ -197,5 +192,14 @@
    				line-height: 1.36364;
 			}
 		</style>
+
+		<script type="text/javascript">
+			function start() {
+				var audio = new Audio();
+				audio.src = "./mp3/ukulele.mp3";
+				audio.play();
+			}
+
+		</script>
 	</body>
 </html>

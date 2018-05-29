@@ -83,8 +83,10 @@ function drop(ev) {
     chick_new_src = "./image/chick_tasty.png";
   } else if (item_id == "Chips") {
     chick_new_src = "./image/chick_unhappy.png";
-  } else if (item_id == "Cake") {
+  } else if (item_id == "Chocolate") {
     chick_new_src = "./image/chick_eyeClose.png";
+  } else if (item_id == "Cake") {
+    chick_new_src = "./image/chick_birthday.png";
   } else if (item_id == "Hamburger" || item_id == "Chocolate") {
     chick_new_src = "./image/chick_yummy.png";
   }
@@ -115,6 +117,9 @@ function drop(ev) {
     setTimeout(function() {
       message.innerHTML = "Congratulations! Now you have more food in your body than in the fridge.<br>Let's watch the video about how funny the animals are when they get fat.";
       message.style.color = "white";
+      message.style.fontSize = "x-large";
+      message.style.fontWeight = "bold";
+      message.style.backgroundColor = "rgba(0, 0, 0, .7)";
       document.getElementById("grid-container").style.backgroundImage = "url('./image/chick_firework.jpg')";
       chick.style.display = "none";
       fridge.style.display = "none";
@@ -127,6 +132,6 @@ function drop(ev) {
 
     setTimeout(function() {
       video.style.display = "block";
-    } ,6000);
+    } ,9000);
   }
 }
