@@ -1,12 +1,4 @@
-// function start() {
-//   var canvas = document.getElementById('canvas');
-//   var context = canvas.getContext('2d');
-//   var image = new Image();
-//   image.onload = function() {
-//     context.drawImage(image, 0, 0);
-//   };
-//   image.src = "./image/cabbage.png";
-// }
+
 var fatFactor = 1;
 var inner = document.getElementById('inner');
 var chick = document.getElementById('chick');
@@ -19,7 +11,11 @@ var firework = document.getElementById('firework');
 var audio = new Audio();
 var drop_count = 0;
 
-
+var audio_BG = new Audio();
+function start() {
+  audio_BG.src = "./mp3/mickleness__splash.mp3"
+  audio_BG.play();
+}
 
 function allowDrop(ev) {
     ev.preventDefault();
@@ -125,6 +121,7 @@ function drop(ev) {
       fridge.style.display = "none";
       bowl.style.display = "none";
 
+      audio_BG.pause();
       audio.src = "./mp3/firework.wav";
       audio.play();
 

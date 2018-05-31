@@ -16,11 +16,8 @@
       </div>
 
     </div>
-    <button onclick="load()">Next</button>
+    <button onclick="load()" id='button'>Next</button>
     </div>
-
-
-
 
     <style>
       body {
@@ -92,6 +89,7 @@
       }
 
       button {
+        display: none;
         width: 8vw;
         height: 8vh;
 
@@ -105,7 +103,7 @@
 
   			padding: 15px 15px;
   			text-align: center;
-  			display: inline-block;
+  			/* display: inline-block; */
   			font-size: 16px;
 
   			transition-duration: 0.4s;
@@ -130,6 +128,9 @@
         window.location = "foxSleep.html";
       }
 
+      setTimeout(function() {
+        document.getElementById('button').style.display = 'inline-block';
+      }, 3000);
     </script>
 
   </body>

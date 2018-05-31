@@ -13,7 +13,7 @@
           <div class="text">Click here to turn on the radio.</div>
         </div>
       </div>
-      <button onclick="load()">go find a chick</button>
+      <button onclick="load()" id='button'>go find a chick</button>
     </div>
 
 
@@ -24,6 +24,7 @@
         margin: 0;
       }
       button {
+        display: none;
         width: 12vw;
         height: 8vh;
 
@@ -37,7 +38,6 @@
 
   			padding: 15px 15px;
   			text-align: center;
-  			display: inline-block;
   			font-size: 16px;
 
   			transition-duration: 0.4s;
@@ -113,7 +113,7 @@
       var audio_start = new Audio();
       var fox = document.getElementById("fox");
       audio_radio.src = "./mp3/turkey.mp3";
-      audio_start.src = "./mp3/big_snore.wav"
+      audio_start.src = "./mp3/big_snore.mp3"
 
       function start() {
         audio_start.play();
@@ -123,14 +123,16 @@
         audio_radio.play();
         setTimeout(function() {
           fox.style.backgroundImage = "url(./image/fox_hungry.png)";
-
         },3000);
-
       }
 
       function load() {
         window.location = "foxFindChick.html";
       }
+
+      setTimeout(function() {
+        document.getElementById('button').style.display = 'inline-block';
+      }, 10000);
 
 
     </script>

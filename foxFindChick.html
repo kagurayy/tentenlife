@@ -15,7 +15,7 @@
       </div>
 
     </div>
-    <button onclick="load()">Feed the chick</button>
+    <button onclick="load()" id="button">Feed the chick</button>
     </div>
 
 
@@ -26,6 +26,7 @@
         margin: 0;
       }
       button {
+        display: none;
         width: 12vw;
         height: 8vh;
 
@@ -39,7 +40,6 @@
 
         padding: 15px 15px;
         text-align: center;
-        display: inline-block;
         font-size: 16px;
 
         transition-duration: 0.4s;
@@ -119,6 +119,10 @@
       function load() {
         window.location = "game_page2.html"
       }
+
+      setTimeout(function() {
+        document.getElementById('button').style.display = 'inline-block';
+      }, 3000);
 
 
     </script>
