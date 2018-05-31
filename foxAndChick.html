@@ -16,7 +16,7 @@
       </div>
 
     </div>
-    <button onclick="load()"></button>
+    <button onclick="load()">Next</button>
     </div>
 
 
@@ -47,8 +47,8 @@
         'b c c c chick chick'
         'b c c c chick chick'
         'fox fox fox f f g'
-        'fox fox fox h i i'
-        'fox fox fox h i i';
+        'fox fox fox i i i'
+        'fox fox fox i i i';
         grid-gap: 0;
         padding: 1%;
         box-sizing: border-box;
@@ -77,30 +77,57 @@
       .f {
         grid-area: f;
         text-align: left;
-        font-size: 60px;
+        font-size: 50px;
         color: rgb(244, 244, 53);
         font-family: Chalkduster, fantasy;
         font-weight: bold;
       }
       .i {
         grid-area: i;
-        text-align: left;
+        text-align: center;
         font-size: 80px;
         color: rgb(244, 244, 53);
         font-family: Chalkduster, fantasy;
         font-weight: bold;
+      }
+
+      button {
+        width: 8vw;
+        height: 8vh;
+
+        position: absolute;
+        left: 72vw;
+        top: 90vh;
+
+        background-color: #4CAF50;
+  			border: none;
+  			color: black;
+
+  			padding: 15px 15px;
+  			text-align: center;
+  			display: inline-block;
+  			font-size: 16px;
+
+  			transition-duration: 0.4s;
+  			cursor: pointer;
+      }
+
+      button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
       }
     </style>
 
 
     <script type="text/javascript">
       var audio = new Audio();
-      audio.src = "";
+      audio.src = "./mp3/cartoon-game-theme-loop.wav";
       function start() {
-        // audio.play();
-        setTimeout(function () {
-          window.location = "fox.html";
-        },2000);
+        audio.play();
+      }
+
+
+      function load() {
+        window.location = "foxSleep.html";
       }
 
     </script>

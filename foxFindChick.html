@@ -12,11 +12,10 @@
         <div class="a">Please...I'm small and skinny, not tasty! If you could feed me some food, I will be more delicious.</div>
         <div class="b"></div>
         <div class="c">HAHAHA, you look so tasty! I'm hungry now!</div>
-
       </div>
 
     </div>
-    <button onclick="load()">Feed the chick.</button>
+    <button onclick="load()">Feed the chick</button>
     </div>
 
 
@@ -27,7 +26,7 @@
         margin: 0;
       }
       button {
-        width: 16vw;
+        width: 12vw;
         height: 8vh;
 
         position: absolute;
@@ -45,10 +44,12 @@
 
         transition-duration: 0.4s;
         cursor: pointer;
-
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-
       }
+
+      button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+
       #container {
         width: 70vw;
         height: 100vh;
@@ -109,6 +110,12 @@
 
 
     <script type="text/javascript">
+      var audio = new Audio();
+      audio.src = "./mp3/scary.wav";
+      function start() {
+        audio.play();
+      }
+
       function load() {
         window.location = "game_page2.html"
       }
