@@ -15,6 +15,11 @@ var audio_BG = new Audio();
 function start() {
   audio_BG.src = "./mp3/mickleness__splash.mp3"
   audio_BG.play();
+  audio_BG.loop = true;
+}
+
+function load() {
+  window.location = "becomeFriend.html"
 }
 
 function allowDrop(ev) {
@@ -40,14 +45,14 @@ function drop(ev) {
   var chick_new_src = "";
 
   if (item_id == "banana") {
-    message_box = "Bananas are rich in potassium and fiber. They can help prevent asthma, cancer, high blood pressure, diabetes, cardiovascular disease, and digestive problems. I like bananas!";
+    message_box = "Bananas can help my digestion and it can also bring me a good mood.";
     audio.src = "./mp3/eat_quick.mp3";
   } else if (item_id == "cabbage") {
-    message_box = "Cabbage is rich in antioxidants, including vitamin C, anthocyanins, and sulfur, since it is a cruciferous vegetable. Do I look prettier?";
+    message_box = "Actually, I don't like cabbage. But I have no choice now.<br> Em... It wasn't as bad as I thought. ";
     audio.src = "./mp3/eat_salad.wav";
 
   } else if (item_id == "tomato") {
-    message_box = "Is a tomato a fruit or a vegetable? True fruits are developed from the ovary in the base of the flower, and contain the seeds of the plant. So...";
+    message_box = "Is a tomato a fruit or a vegetable? I think it is a vegetable.";
     audio.src = "./mp3/eat_tomato.wav";
 
   } else if (item_id == "salad") {
@@ -63,11 +68,11 @@ function drop(ev) {
     audio.src = "./mp3/eat_yummy.mp3";
 
   } else if (item_id == "Cake") {
-    message_box = "Vegetables are a must on a diet. I suggest carrot cake, healthy and tasty.";
+    message_box = "How could you know that today is my birthday. I'm so happy, thank you Mr. fox.";
     audio.src = "./mp3/eat_mhm.mp3";
 
   } else if (item_id == "Hamburger") {
-    message_box = "In the states, you can buy Chinese food. In Beijing you can buy hamburger. It's very close. Now I feel the world become a big family. Not like before, two countries are far away.";
+    message_box = "Is a hamburger really unhealthy? With just one hamburger, I can get bread, beef and lettuce. those are all healthy food, right?";
     audio.src = "./mp3/eat_yummy.mp3";
   }
 
@@ -111,7 +116,7 @@ function drop(ev) {
 
   if (drop_count == 8 ) {
     setTimeout(function() {
-      message.innerHTML = "Congratulations! Now you have more food in your body than in the fridge.<br>Let's watch the video about how funny the animals are when they get fat.";
+      message.innerHTML = "Congratulations! Now you have more food in your body than in the fridge.<br>Let's watch a video about how funny animals are when they get fat.";
       message.style.color = "white";
       message.style.fontSize = "x-large";
       message.style.fontWeight = "bold";
@@ -125,10 +130,14 @@ function drop(ev) {
       audio.src = "./mp3/firework.wav";
       audio.play();
 
-    }, 3000);
+    }, 6000);
 
     setTimeout(function() {
       video.style.display = "block";
-    } ,9000);
+    } ,11000);
+
+    setTimeout(function() {
+      document.getElementById('button').style.display = 'inline-block';
+    }, 15000);
   }
 }

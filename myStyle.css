@@ -80,3 +80,28 @@ body {
   box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   transform: scale(1.05);
 }
+
+button {
+  display: none;
+  width: 12vw;
+  height: 8vh;
+
+  position: absolute;
+  left: 72vw;
+  top: 90vh;
+
+  background-color: #4CAF50;
+  border: none;
+  color: black;
+
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 16px;
+
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}

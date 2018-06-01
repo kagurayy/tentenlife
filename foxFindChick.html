@@ -7,19 +7,16 @@
   <body onload="start()">
     <div id="container">
       <div id="grid_container">
-        <div class="fox"></div>
-        <div class="chick"></div>
-        <div class="a">Please...I'm small and skinny, not tasty! If you could feed me some food, I will be more delicious.</div>
-        <div class="b"></div>
-        <div class="c">HAHAHA, you look so tasty! I'm hungry now!</div>
+        <div id="fox"></div>
+        <div id="chick"></div>
+        <div id="a"></div>
+        <div id="b"></div>
+        <div id="c">HAHAHA, you look so tasty! I'm hungry now!</div>
       </div>
 
     </div>
     <button onclick="load()" id="button">Feed the chick</button>
     </div>
-
-
-
 
     <style>
       body {
@@ -64,54 +61,52 @@
         background-color: rgb(2, 45, 31);
 
         display: grid;
-        grid-template-columns: 16.6% 16.6% 16.6% 16.6%;
-        grid-template-rows: 16.6% 16.6% 16.6% 16.6%;
+        grid-template-columns: 15% 15% 15% 15% 15% 15%;
+        grid-template-rows: 15% 15% 15% 15% 15% 15%;
         grid-template-areas:
         'a a a a chick chick'
         'a a a a chick chick'
-        'b b b b b b'
-        'b b b b b b'
+        'd d d d d d'
+        'fox fox c c c c'
         'fox fox c c c c'
         'fox fox c c c c';
-        grid-gap: 0;
+        grid-gap: 1.6%;
         padding: 1%;
         box-sizing: border-box;
       }
 
-      .fox {
+      #fox {
         grid-area: fox;
         background: url(./image/fox_fork.png) no-repeat;
         background-size: contain;
         background-position: center;
       }
-      .chick {
+      #chick {
         grid-area: chick;
         background: url(./image/chick_scared.png) no-repeat;
         background-size: contain;
         background-position: center;
       }
-      .a {
+      #a {
         grid-area: a;
-        background-color: red;
-        text-align: center;
-        font-size: 38px;
+        text-align: left;
+        font-size: 36px;
+        align-self: center;
       }
-      .c {
+      #c {
         grid-area: c;
-        background-color: blue;
-        text-align: center;
+        text-align: left;
         font-size: 40px;
+        background-color: rgba(242, 184, 113, 0.3);
+        align-self: center;
       }
-
-
-
-
     </style>
 
 
     <script type="text/javascript">
       var audio = new Audio();
-      audio.src = "./mp3/scary.wav";
+      audio.src = "./mp3/scary.mp3";
+      var textArea = document.getElementById('a');
       function start() {
         audio.play();
       }
@@ -120,11 +115,37 @@
         window.location = "game_page2.html"
       }
 
+      function text1() {
+        textArea.innerHTML = "Please... I'm small and skinny, not tasty! If you could feed me some food, I will be more delicious."
+        textArea.style.backgroundColor = "rgba(120, 177, 237, 0.3)";
+      }
+
+      setTimeout(text1 ,3000);
+
+      function text2() {
+        textArea = document.getElementById('c');
+        textArea.innerHTML = "That sounds not bad, let's do that!"
+        textArea.style.backgroundColor = "rgba(239, 27, 11, 0.3)";
+      }
+      setTimeout(text2 ,6000);
+
+      function text3() {
+        textArea = document.getElementById('a');
+        textArea.innerHTML = "Mr. fox, maybe after a few days, you don't want to eat me anymore, you will like me!"
+        textArea.style.backgroundColor = "rgba(242, 184, 113, 0.3)";
+      }
+      setTimeout(text3 ,9000);
+
+      function text4() {
+        textArea = document.getElementById('c');
+        textArea.innerHTML = "Mr. chick, have you ever seen that a hunter will make freinds with his prey? HAHAHA..."
+        textArea.style.backgroundColor = "rgba(173, 117, 221, 0.3)";
+      }
+      setTimeout(text4 ,13000);
+
       setTimeout(function() {
         document.getElementById('button').style.display = 'inline-block';
-      }, 3000);
-
-
+      }, 15000);
     </script>
 
   </body>
