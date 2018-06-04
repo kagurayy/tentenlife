@@ -19,7 +19,7 @@ function start() {
 }
 
 function load() {
-  window.location = "becomeFriend.html"
+  window.location = "FAC_page4.html"
 }
 
 function allowDrop(ev) {
@@ -48,7 +48,7 @@ function drop(ev) {
     message_box = "Bananas can help my digestion and it can also bring me a good mood.";
     audio.src = "./mp3/eat_quick.mp3";
   } else if (item_id == "cabbage") {
-    message_box = "Actually, I don't like cabbage. But I have no choice now.<br> Em... It wasn't as bad as I thought. ";
+    message_box = "Actually, I don't like cabbage. But I have no choice now.<br> Em... It wasn't as bad as I thought.";
     audio.src = "./mp3/eat_salad.wav";
 
   } else if (item_id == "tomato") {
@@ -56,7 +56,7 @@ function drop(ev) {
     audio.src = "./mp3/eat_tomato.wav";
 
   } else if (item_id == "salad") {
-    message_box = "Oh, you bring me a salad! Look at the colorful garden vegatables, they are so tasty. Thank you very much!";
+    message_box = "Oh, you bring me a salad! Look at the colorful garden vegetables, they are so tasty. Thank you very much!";
     audio.src = "./mp3/eat_salad.wav";
 
   } else if (item_id == "Chips") {
@@ -72,7 +72,7 @@ function drop(ev) {
     audio.src = "./mp3/eat_mhm.mp3";
 
   } else if (item_id == "Hamburger") {
-    message_box = "Is a hamburger really unhealthy? With just one hamburger, I can get bread, beef and lettuce. those are all healthy food, right?";
+    message_box = "Is a hamburger really unhealthy? With just one hamburger, I can get bread, beef and lettuce. Those are all healthy food, right?";
     audio.src = "./mp3/eat_yummy.mp3";
   }
 
