@@ -44,53 +44,97 @@ function drop(ev) {
 
   var chick_new_src = "";
 
-  if (item_id == "banana") {
+  // if (item_id == "banana") {
+  //   message_box = "Bananas can help my digestion and it can also bring me a good mood.";
+  //   audio.src = "./mp3/eat_quick.mp3";
+  // } else if (item_id == "cabbage") {
+  //   message_box = "Actually, I don't like cabbage. But I have no choice now.<br> Em... It wasn't as bad as I thought.";
+  //   audio.src = "./mp3/eat_salad.wav";
+  //
+  // } else if (item_id == "tomato") {
+  //   message_box = "Is a tomato a fruit or a vegetable? I think it is a vegetable.";
+  //   audio.src = "./mp3/eat_tomato.wav";
+  //
+  // } else if (item_id == "salad") {
+  //   message_box = "Oh, you bring me a salad! Look at the colorful garden vegetables, they are so tasty. Thank you very much!";
+  //   audio.src = "./mp3/eat_salad.wav";
+  //
+  // } else if (item_id == "Chips") {
+  //   message_box = "Chips are typically high in fat and calories. I begin to worry about my weight.";
+  //   audio.src = "./mp3/eat_chips.wav";
+  //
+  // } else if (item_id == "Chocolate") {
+  //   message_box = "What is the meaning of life? All evidence to date suggest it's chocolate. I can even take chocolate from strangers.";
+  //   audio.src = "./mp3/eat_yummy.mp3";
+  //
+  // } else if (item_id == "Cake") {
+  //   message_box = "How could you know that today is my birthday. I'm so happy, thank you Mr. fox.";
+  //   audio.src = "./mp3/eat_mhm.mp3";
+  //
+  // } else if (item_id == "Hamburger") {
+  //   message_box = "Is a hamburger really unhealthy? With just one hamburger, I can get bread, beef and lettuce. Those are all healthy food, right?";
+  //   audio.src = "./mp3/eat_yummy.mp3";
+  // }
+
+  switch (item_id)
+  {
+  case "banana":
     message_box = "Bananas can help my digestion and it can also bring me a good mood.";
     audio.src = "./mp3/eat_quick.mp3";
-  } else if (item_id == "cabbage") {
+    chick_new_src = "./image/chick_thanks.png";
+    break;
+  case "cabbage":
     message_box = "Actually, I don't like cabbage. But I have no choice now.<br> Em... It wasn't as bad as I thought.";
     audio.src = "./mp3/eat_salad.wav";
-
-  } else if (item_id == "tomato") {
+    chick_new_src = "./image/chick_tasty.png";
+    break;
+  case "tomato":
     message_box = "Is a tomato a fruit or a vegetable? I think it is a vegetable.";
     audio.src = "./mp3/eat_tomato.wav";
-
-  } else if (item_id == "salad") {
+    chick_new_src = "./image/chick_tasty.png";
+    break;
+  case "salad":
     message_box = "Oh, you bring me a salad! Look at the colorful garden vegetables, they are so tasty. Thank you very much!";
     audio.src = "./mp3/eat_salad.wav";
-
-  } else if (item_id == "Chips") {
+    chick_new_src = "./image/chick_happy.png";
+    break;
+  case "Chips":
     message_box = "Chips are typically high in fat and calories. I begin to worry about my weight.";
     audio.src = "./mp3/eat_chips.wav";
-
-  } else if (item_id == "Chocolate") {
+    chick_new_src = "./image/chick_unhappy.png";
+    break;
+  case "Chocolate":
     message_box = "What is the meaning of life? All evidence to date suggest it's chocolate. I can even take chocolate from strangers.";
     audio.src = "./mp3/eat_yummy.mp3";
-
-  } else if (item_id == "Cake") {
+    chick_new_src = "./image/chick_eyeClose.png";
+    break;
+  case "Cake":
     message_box = "How could you know that today is my birthday. I'm so happy, thank you Mr. fox.";
     audio.src = "./mp3/eat_mhm.mp3";
-
-  } else if (item_id == "Hamburger") {
+    chick_new_src = "./image/chick_birthday.png";
+    break;
+  case "Hamburger":
     message_box = "Is a hamburger really unhealthy? With just one hamburger, I can get bread, beef and lettuce. Those are all healthy food, right?";
     audio.src = "./mp3/eat_yummy.mp3";
+    chick_new_src = "./image/chick_yummy.png";
+    break;
   }
 
-  if (item_id == "salad") {
-    chick_new_src = "./image/chick_happy.png";
-  } else if (item_id == "banana") {
-    chick_new_src = "./image/chick_thanks.png";
-  } else if (item_id == "tomato" || item_id == "cabbage") {
-    chick_new_src = "./image/chick_tasty.png";
-  } else if (item_id == "Chips") {
-    chick_new_src = "./image/chick_unhappy.png";
-  } else if (item_id == "Chocolate") {
-    chick_new_src = "./image/chick_eyeClose.png";
-  } else if (item_id == "Cake") {
-    chick_new_src = "./image/chick_birthday.png";
-  } else if (item_id == "Hamburger" || item_id == "Chocolate") {
-    chick_new_src = "./image/chick_yummy.png";
-  }
+  // if (item_id == "salad") {
+  //   chick_new_src = "./image/chick_happy.png";
+  // } else if (item_id == "banana") {
+  //   chick_new_src = "./image/chick_thanks.png";
+  // } else if (item_id == "tomato" || item_id == "cabbage") {
+  //   chick_new_src = "./image/chick_tasty.png";
+  // } else if (item_id == "Chips") {
+  //   chick_new_src = "./image/chick_unhappy.png";
+  // } else if (item_id == "Chocolate") {
+  //   chick_new_src = "./image/chick_eyeClose.png";
+  // } else if (item_id == "Cake") {
+  //   chick_new_src = "./image/chick_birthday.png";
+  // } else if (item_id == "Hamburger" || item_id == "Chocolate") {
+  //   chick_new_src = "./image/chick_yummy.png";
+  // }
 
   if(series == 'V') {
     setTimeout(function() {
