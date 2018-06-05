@@ -115,20 +115,19 @@
       }
       function radio() {
         audio_radio.play();
+
         setTimeout(function() {
           fox.style.backgroundImage = "url(./image/fox_hungry.png)";
         },3000);
+
+        setTimeout(function() {
+          document.getElementById('button').style.display = 'inline-block';
+        }, 10000);
       }
 
       function load() {
         window.location = "FAC_page2.html";
       }
-
-      setTimeout(function() {
-        document.getElementById('button').style.display = 'inline-block';
-      }, 10000);
-
-
     </script>
 
   </body>
