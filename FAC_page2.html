@@ -106,7 +106,8 @@
     <script type="text/javascript">
       var audio = new Audio();
       audio.src = "./mp3/scary.mp3";
-      var textArea = document.getElementById('a');
+      var textArea_chick = document.getElementById('a');
+      var textArea_fox = document.getElementById('c');
       function start() {
         audio.play();
       }
@@ -116,30 +117,35 @@
       }
 
       function text1() {
-        textArea.innerHTML = "Please... I'm small and skinny, not tasty! If you could feed me some food, I will be more delicious."
-        textArea.style.backgroundColor = "rgba(120, 177, 237, 0.3)";
+        textArea_chick.innerHTML = "Please... I'm small and skinny, not tasty! If you could feed me some food, I will be more delicious."
+        textArea_chick.style.backgroundColor = "rgba(120, 177, 237, 0.3)";
+        textArea_fox.style.display = 'none';
       }
 
-      setTimeout(text1 ,3000);
+      setTimeout(text1 ,1500);
 
       function text2() {
-        textArea = document.getElementById('c');
-        textArea.innerHTML = "That sounds good, let's do that!"
-        textArea.style.backgroundColor = "rgba(239, 27, 11, 0.3)";
+        textArea_fox.style.display = 'block';
+        textArea_fox.innerHTML = "That sounds good, let's do that!"
+        textArea_fox.style.backgroundColor = "rgba(239, 27, 11, 0.3)";
+        textArea_chick.style.display = 'none';
+
       }
       setTimeout(text2 ,6000);
 
       function text3() {
-        textArea = document.getElementById('a');
-        textArea.innerHTML = "Mr. Fox, maybe after a few days, you won't want to eat me anymore, you will like me!"
-        textArea.style.backgroundColor = "rgba(242, 184, 113, 0.3)";
+        textArea_chick.style.display = 'block';
+        textArea_chick.innerHTML = "Mr. Fox, maybe after a few days, you won't want to eat me anymore, you will like me!"
+        textArea_chick.style.backgroundColor = "rgba(242, 184, 113, 0.3)";
+        textArea_fox.style.display = 'none';
       }
       setTimeout(text3 ,9000);
 
       function text4() {
-        textArea = document.getElementById('c');
-        textArea.innerHTML = "Mr. Chick, have you ever seen that a hunter makes friends with his prey? HAHAHA..."
-        textArea.style.backgroundColor = "rgba(173, 117, 221, 0.3)";
+        textArea_fox.style.display = 'block';
+        textArea_fox.innerHTML = "Mr. Chick, have you ever seen that a hunter makes friends with his prey? HAHAHA..."
+        textArea_fox.style.backgroundColor = "rgba(173, 117, 221, 0.3)";
+        textArea_chick.style.display = 'none';
       }
       setTimeout(text4 ,13000);
 
