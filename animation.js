@@ -84,7 +84,7 @@ function drop(ev) {
     chick_new_src = "./image/chick_thanks.png";
     break;
   case "cabbage":
-    message_box = "Actually, I don't like cabbage. But I have no choice now.<br> Em... It wasn't as bad as I thought.";
+    message_box = "Actually, I don't like cabbage. But I have no choice now.<br> Mmmm! It wasn't as bad as I thought.";
     audio.src = "./mp3/eat_salad.wav";
     chick_new_src = "./image/chick_tasty.png";
     break;
