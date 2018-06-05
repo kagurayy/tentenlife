@@ -79,12 +79,12 @@ function drop(ev) {
   switch (item_id)
   {
   case "banana":
-    message_box = "Bananas can help my digestion and it can also bring me a good mood.";
+    message_box = "Bananas can help my digestion and also put me in a good mood.";
     audio.src = "./mp3/eat_quick.mp3";
     chick_new_src = "./image/chick_thanks.png";
     break;
   case "cabbage":
-    message_box = "Actually, I don't like cabbage. But I have no choice now.<br> Mmmm! It wasn't as bad as I thought.";
+    message_box = "Actually, I don't like cabbage. But I have no choice now.<br> Mmmm... It wasn't as bad as I thought.";
     audio.src = "./mp3/eat_salad.wav";
     chick_new_src = "./image/chick_tasty.png";
     break;
@@ -94,27 +94,27 @@ function drop(ev) {
     chick_new_src = "./image/chick_tasty.png";
     break;
   case "salad":
-    message_box = "Oh, you bring me a salad! Look at the colorful garden vegetables, they are so tasty. Thank you very much!";
+    message_box = "Oh, you brought me a salad! Look at the colorful garden vegetables, they are so tasty. Thank you very much!";
     audio.src = "./mp3/eat_salad.wav";
     chick_new_src = "./image/chick_happy.png";
     break;
   case "Chips":
-    message_box = "Chips are typically high in fat and calories. I begin to worry about my weight.";
+    message_box = "Chips are typically high in fat and calories. I'm beginning to worry about my weight.";
     audio.src = "./mp3/eat_chips.wav";
     chick_new_src = "./image/chick_unhappy.png";
     break;
   case "Chocolate":
-    message_box = "What is the meaning of life? All evidence to date suggest it's chocolate. I can even take chocolate from strangers.";
+    message_box = "Chocolate! My precious! No one can take one piece of chocolate from me.";
     audio.src = "./mp3/eat_yummy.mp3";
     chick_new_src = "./image/chick_eyeClose.png";
     break;
   case "Cake":
-    message_box = "How could you know that today is my birthday. I'm so happy, thank you Mr. fox.";
+    message_box = "How did you know that today was my birthday. I'm so happy, thank you Mr. Fox.";
     audio.src = "./mp3/eat_mhm.mp3";
     chick_new_src = "./image/chick_birthday.png";
     break;
   case "Hamburger":
-    message_box = "Is a hamburger really unhealthy? With just one hamburger, I can get bread, beef and lettuce. Those are all healthy food, right?";
+    message_box = "Is a hamburger really unhealthy? With just one hamburger, I can get bread, beef and lettuce. Those are all healthy foods, right?";
     audio.src = "./mp3/eat_yummy.mp3";
     chick_new_src = "./image/chick_yummy.png";
     break;
