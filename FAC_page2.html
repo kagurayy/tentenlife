@@ -110,6 +110,7 @@
       var textArea_fox = document.getElementById('c');
       function start() {
         audio.play();
+        audio.loop = true;
       }
 
       function load() {
@@ -130,7 +131,7 @@
         textArea_chick.style.display = 'none';
 
       }
-      setTimeout(text2 ,7000);
+      setTimeout(text2 ,8000);
 
       function text3() {
         textArea_chick.style.display = 'block';
@@ -138,7 +139,7 @@
         textArea_chick.style.backgroundColor = "rgba(242, 184, 113, 0.3)";
         textArea_fox.style.display = 'none';
       }
-      setTimeout(text3 ,9000);
+      setTimeout(text3 ,10000);
 
       function text4() {
         textArea_fox.style.display = 'block';
@@ -146,11 +147,11 @@
         textArea_fox.style.backgroundColor = "rgba(173, 117, 221, 0.3)";
         textArea_chick.style.display = 'none';
       }
-      setTimeout(text4 ,14000);
+      setTimeout(text4 ,15000);
 
       setTimeout(function() {
         document.getElementById('button').style.display = 'inline-block';
-      }, 15000);
+      }, 17000);
     </script>
 
   </body>
